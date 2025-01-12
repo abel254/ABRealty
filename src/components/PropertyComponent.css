@@ -1,0 +1,38 @@
+/* propertycomponent.css */
+
+/* Style for property cards */
+.property-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  
+  .property-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .property-card .card-content {
+    padding: 20px;
+  }
+  
+  .property-card h4 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .property-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .property-card p {
+    font-size: 16px;
+    color: #888;
+  }
+  
