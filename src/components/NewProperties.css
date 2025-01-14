@@ -1,0 +1,11 @@
+.new-properties {
+    margin-top: 4em;
+    height: 110vh;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+.new-properties h2 {
+    font-size: 1.45rem;
+    color: #505050;
+}

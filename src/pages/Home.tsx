@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import { BannerComponent } from '../components/Banner';
 import NewProperties from '../components/NewProperties';
 import { propertiesData } from '../data/propertiesData';
+import AboutUsHome from '../components/AboutUsHome';
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <Container>
             <BannerComponent />
             <NewProperties properties={propertiesData}/>
+            <AboutUsHome />
         </Container>
         </>
   )
