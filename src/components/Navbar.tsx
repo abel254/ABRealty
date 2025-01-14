@@ -9,9 +9,10 @@ interface CustomLinkProps extends LinkProps {
 
 export default function Navbar() {
   return (
-    <nav className="nav">
+   <div className="nav-component">
+    <nav className="nav container">
       <Link to="/" className="site-title">
-        LOGO
+        ABRealty
       </Link>
       <ul>
       <CustomLink to="/">Home</CustomLink>
@@ -20,6 +21,8 @@ export default function Navbar() {
         <CustomLink to="/contact">Contact</CustomLink>
       </ul>
     </nav>
+   </div>
+    
   )
 }
 

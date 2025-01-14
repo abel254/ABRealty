@@ -7,6 +7,7 @@ import Property from './pages/Property';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
       </div>
+      <Footer />
    </>
   );
 }

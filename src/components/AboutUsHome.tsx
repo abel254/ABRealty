@@ -11,7 +11,7 @@ export default function AboutUsHome() {
             <div className="about-infobg">
                 <div className="about-info">
                 <h4>We're committed to your ideal property investment.</h4>
-                <p>At AbeltheRealtor, we help you find ideal property investments by focusing on prime locations, superior quality, and promising ROI.</p>
+                <p>At ABRealty, we help you find ideal property investments by focusing on prime locations, superior quality, and promising ROI.</p>
                 <button>About Us</button>
                 </div>
             </div>
