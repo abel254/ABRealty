@@ -4,48 +4,61 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  position: relative;
 }
-.property-card {
+.card-component .property-card {
   flex: 1;
   background-color: white;
   overflow:hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 90%;
-  
+  width: 100%;
 }
-.property-card .image {
+.card-component .property-card .image {
   width: 100%;
   height: 50%;
 }
-.property-card .image img {
+.card-component .property-card .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.property-card .card-content {
-  height: 50%;
-}
 
-
-
-.property-card .card-content h4 {
-  font-size: 0.75rem;
+.card-component .property-card .card-content h4 {
+  font-size: 0.7rem;
   text-transform:uppercase;
   color: #505050;
   margin-bottom: 10px;
 }
 
-.property-card h3 {
+.card-component .property-card h3 {
   font-size: 1.3rem;
   font-weight: bold;
   color: #2e2e30;
   margin-bottom: 10px;
   letter-spacing: 0.5px;
-  text-transform:uppercase;
+}
+.card-component .property-card p {
+  font-size: 0.75rem;
+  color: #505050;
+  letter-spacing: .3px;
+}
+.card-component .property-card .start span {
+  font-weight: bold;
+  color: green;
+  font-size: 0.9rem;
 }
 
-.property-card p {
-  font-size: 0.85rem;
-  color: #888;
+/* First Property */
+
+.first-property {
+  height: 100%;
+}
+.first-property .property-card .image{
+  height: 100%;
+}
+.first-property .property-card .image img {
+  width: 100%;
+  height: 100%;
 }

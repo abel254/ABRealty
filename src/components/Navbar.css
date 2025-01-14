@@ -1,15 +1,24 @@
+.nav-component {
+    background-color: white;
+    border-bottom: .5px solid #888;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
 .nav{
-    background-color: #333;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     gap: 2rem;
-    padding: 0 1rem;
+    padding: 1.15rem 1rem;
+    
 }
 
 .site-title {
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .nav ul {
@@ -18,6 +27,7 @@
     list-style: none;
     display: flex;
     gap: 1rem;
+    font-weight: bold;
 }
 
 .nav a {
@@ -27,8 +37,10 @@
     display: flex;
     align-items: center;
     padding: .25rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
 }
 
 .nav li.active {
-    background-color: #555;
+    color: #ba3610;
 }

@@ -11,7 +11,7 @@ export default function NewProperties({ properties = propertiesData }) {
         <div className="row gx-4 gy-4">
           {/* First large property card occupying 50% of section width */}
           <div className="first col-lg-6">
-            <PropertyComponent {...properties[0]} />
+            <PropertyComponent {...properties[0]} isFirst={true}/>
           </div>
           {/* Grid of remaining 4 property cards */}
           <div className="col-lg-6">
