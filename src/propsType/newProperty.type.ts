@@ -4,6 +4,6 @@ export type PropertyType = {
     location: string;
     title: string;
     price: string;
-    completion: string;
+    description: string;
   };
   
