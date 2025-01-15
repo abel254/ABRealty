@@ -1,17 +1,10 @@
 import React from 'react'
 import './PropertyComponent.css'
 import { FaLocationDot } from "react-icons/fa6";
+import {PropertyType} from '../propsType/newProperty.type';
 
-interface PropertyComponentProps {
-  image: string
-  location: string
-  title: string
-  price: string
-  description: string
-  isFirst?: boolean
-}
 
-export default function PropertyComponent({ image, location, title, price, description, isFirst }: PropertyComponentProps) {
+export default function PropertyComponent({ image, location, title, price, description, isFirst }: PropertyType) {
   return (
     <div className={`card-component ${isFirst ? 'first-property' : ''}`}>
        <div className="property-card h-100 d-flex flex-column">

@@ -1,0 +1,12 @@
+.property-grid{
+    background-color: white;
+    width: 100%;
+    padding-top: 4em;
+    padding-bottom: 3em;
+    
+}
+.property-grid .heading{
+    text-align: center;
+    letter-spacing: .05rem;
+    padding-bottom: 1em;
+}
