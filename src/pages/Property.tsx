@@ -1,9 +1,12 @@
 import React from 'react'
+import PropertyBanner from '../components/propertyComponents/PropertyBanner'
+import PropertyGrid from '../components/propertyComponents/PropertyGrid'
 
 export default function Property() {
   return (
-    <div>
-      <h1>Properties Page</h1>
-    </div>
+    <>
+    <PropertyBanner />
+    <PropertyGrid />
+    </>
   )
 }

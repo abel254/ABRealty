@@ -1,6 +1,7 @@
 footer {
     border-top: .5px solid #888;
-    margin-top: 3em;
+    z-index: 80;
+    background-color: white;
 }
 footer .footer-components {
     padding: 2em;

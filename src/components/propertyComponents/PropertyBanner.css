@@ -1,0 +1,41 @@
+.top-banner{
+    position: relative;
+    margin-top: -4em;
+}
+.top-banner .intro{
+    background-color: #98cad5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
+    height: 100%;
+    width: 100%;
+    padding-top: 15em;
+}
+.top-banner .intro h3{
+    color: white;
+    font-weight: bold;
+    font-size: 2.3rem;
+    letter-spacing: .1rem;
+}
+.top-banner .intro p{
+    color: white;
+    font-size: .9rem;
+    letter-spacing: .05rem;
+    line-height: 1.6;
+}
+.top-banner .intro svg{
+    font-size: 8em;
+    color: white;
+}
+
+.top-banner .image{
+    width: 100%;
+    height: 100%;
+}
+.top-banner .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
