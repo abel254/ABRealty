@@ -8,6 +8,8 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
+import SingleProperty from './components/propertyComponents/singlePropertyPage/SingleProperty';
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
           <Route path="/property" element={<Property/>}/>
           <Route path="/blog" element={<Blog/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/singleProperty" element={<SingleProperty/>}/>
         </Routes>
       </div>
       <Footer />
