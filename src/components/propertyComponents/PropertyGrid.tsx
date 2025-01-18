@@ -18,6 +18,10 @@ export default function PropertyGrid({properties = propertiesData}) {
             ))}
         </Row>
        </div>
+       <div className="single-property">
+        {/* <button>Single Property</button> */}
+        <a href="/singleProperty" className='button' target="_blank" rel="noopener noreferrer">Single Property</a>
+       </div>
     </section>
     </>
   )
