@@ -5,12 +5,33 @@
   height: 100%;
   box-sizing: border-box;
   position: relative;
+  text-align: start;
+  border: 1px solid #fbfaf8;
+  outline: none;
+  background-color: transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.card-component:hover {
+  color: #98cad5;
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.card-component:hover .card-content h3.title{
+  color: #ba3610; 
+}
+.card-component:hover .card-content p.start span{
+  color: #ba3610; 
+}
+/* .card-component:hover .card-content p.description{
+  color: #98cad5;
+} */
+
+
 .card-component .property-card {
   flex: 1;
   background-color: white;
   overflow:hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
   height: 90%;
   width: 100%;
 }
@@ -44,10 +65,14 @@
   color: #505050;
   letter-spacing: .3px;
 }
+.card-component .property-card .start {
+  font-weight: bold;
+}
 .card-component .property-card .start span {
   font-weight: bold;
   color: green;
   font-size: 0.9rem;
+  border-bottom: 1px solid;
 }
 
 /* First Property */
