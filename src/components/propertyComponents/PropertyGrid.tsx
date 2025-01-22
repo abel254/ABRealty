@@ -3,8 +3,14 @@ import './PropertyGrid.css'
 import { Col, Row } from 'react-bootstrap'
 import { propertiesData } from '../../data/propertiesData'
 import PropertyComponent from '../PropertyComponent'
+import { PropertyType } from '../../propsType/newProperty.type';
 
-export default function PropertyGrid({properties = propertiesData}) {
+interface NewPropertiesProps {
+  properties?: PropertyType[];
+}
+
+
+export default function PropertyGrid({ properties = propertiesData }: NewPropertiesProps) {
   return (
     <>
     <section className="property-grid">
@@ -13,7 +19,7 @@ export default function PropertyGrid({properties = propertiesData}) {
        <Row className='gy-4'>
             {properties.map((property, index) => (
                 <Col lg={4} key={index}>
-                    <PropertyComponent {...property}/>
+                    <PropertyComponent property={property} isFirst={false}/>
                 </Col>
             ))}
         </Row>
