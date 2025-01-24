@@ -27,7 +27,15 @@ export const propertiesData: PropertyType[] = [
       "Landscaped Gardens",
       "Reception",
       "Security",
-      "Parking"
+      "Ample Parking",
+      "Club House",
+      "Backup Generator",
+      "Meeting Room",
+      "High Speed Lifts",
+      "Water Borehole",
+      "Gaming Room",
+      "Restaurant",
+      "Mini Mart",
     ],
     location: "Westlands, Nairobi, Kenya",
     startingPrice: "11,400,000",
@@ -114,7 +122,7 @@ export const propertiesData: PropertyType[] = [
       "Landscaped Gardens",
       "Reception",
       "Security",
-      "Parking"
+      "Ample Parking"
     ],
     location: "Westlands, Nairobi",
     startingPrice: "6,820,000",
