@@ -3,7 +3,6 @@ import "./SingleProperty.css";
 import { Carousel, Col, Row } from "react-bootstrap";
 import { Image } from "react-bootstrap";
 import {
-  FaSwimmingPool,
   FaDumbbell,
   FaChild,
   FaCouch,
@@ -12,6 +11,15 @@ import {
   FaShieldAlt,
   FaCar,
 } from "react-icons/fa"; // Import icons
+import { GiPowerGenerator } from "react-icons/gi";
+import { MdMeetingRoom } from "react-icons/md";
+import { LuArrowDownUp } from "react-icons/lu";
+import { FaBoreHole } from "react-icons/fa6";
+import { MdPool } from "react-icons/md";
+import { GiPoolTableCorner } from "react-icons/gi";
+import { IoIosRestaurant } from "react-icons/io";
+import { RiShoppingCartFill } from "react-icons/ri";
+import { IoMdWine } from "react-icons/io";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { usePropertyContext } from "../../../context/PropertyContext";
 import { propertiesData } from "../../../data/propertiesData";
@@ -57,48 +65,45 @@ export default function SingleProperty() {
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  
-  
 
   // Ensure `propertyItems` exists and is not empty
   if (!propertyItems || propertyItems.length === 0) {
     return <div>No property found.</div>;
   }
 
-  
-  
-  // Find the matching property
-  
-
   if (!propertyPageItems) {
     return <div>Property not found.</div>;
   }
 
   
-  
-
-  // Handle image selection safely when `images` updates
-  
-
   // Define icons
-  const icons: Partial<Record<string, JSX.Element>> = {
-    "Swimming Pool": <FaSwimmingPool size={40} />,
-    "Modern Gym": <FaDumbbell size={40} />,
-    "Kids Play Area": <FaChild size={40} />,
-    "Lounge Area": <FaCouch size={40} />,
-    "Landscaped Garden": <FaTree size={40} />,
-    Reception: <FaConciergeBell size={40} />,
-    Security: <FaShieldAlt size={40} />,
-    Parking: <FaCar size={40} />,
-  };
+  const icons = [
+    { name: "Swimming Pool", icon: <MdPool /> },
+    { name: "Modern Gym", icon: <FaDumbbell /> },
+    { name: "Kids Play Area", icon: <FaChild /> },
+    { name: "Lounge Area", icon: <FaCouch /> },
+    { name: "Landscaped Garden", icon: <FaTree /> },
+    { name: "Reception", icon: <FaConciergeBell /> },
+    { name: "Security", icon: <FaShieldAlt /> },
+    { name: "Ample Parking", icon: <FaCar /> },
+    { name: "Club House", icon:  <IoMdWine />},
+    { name: "Backup Generator", icon: <GiPowerGenerator /> },
+    { name: "Meeting Room", icon: <MdMeetingRoom /> },
+    { name: "High Speed Lifts", icon: <LuArrowDownUp /> },
+    { name: "Water Borehole", icon: <FaBoreHole />},
+    { name: "Gaming Room", icon: <GiPoolTableCorner /> },
+    { name: "Restaurant", icon: <IoIosRestaurant /> },
+    { name: "Mini Mart", icon: <RiShoppingCartFill /> },
+  ];
 
-  // Map amenities with icons
-  const amenities =
-    propertyPageItems.amenities?.map((amenity) => ({
-      name: amenity,
-      icon: icons[amenity] || null,
-    })) || [];
-
+  const amenitiesWithIcons =
+  propertyPageItems.amenities
+    ?.map((amenity, index) => {
+      const matchedIcon = icons[index]; // Match icon sequentially by index
+      return matchedIcon ? { name: amenity, icon: matchedIcon.icon } : null;
+    })
+    .filter(Boolean) || []; // Remove null values
+  
   // Handle image carousel scrolling
  
 
@@ -115,8 +120,9 @@ export default function SingleProperty() {
   return (
     <section className="single-property container">
       <h2 className="heading">
-        {propertyPageItems?.title}
-        <span>|</span> {propertyPageItems?.bedrooms}
+        {propertyPageItems?.title}&nbsp;
+        <span>|</span> {propertyPageItems?.bedrooms}&nbsp;
+        <span>|</span> {propertyPageItems?.location}
       </h2>
       <div className="hero-section">
         {/* Image Carousel */}
@@ -147,10 +153,11 @@ export default function SingleProperty() {
             ‹
           </button>
           <div className="image-scroll" ref={scrollRef}>
-            <Row className="g-1 flex-nowrap">
+            <Row className="gx-4 flex-nowrap">
               {images.map((image, index) => (
                 <Col key={index} className="d-flex justify-content-center">
                   <Image
+                  className="image-col"
                     src={image}
                     alt={`thumbnail-${index}`}
                     thumbnail
@@ -173,14 +180,14 @@ export default function SingleProperty() {
       {/* Description */}
       <div className="description">
         <Row className="gx-4">
-          <Col lg={6}>
+          <Col lg={6} className="column">
             <div className="desc">
               <h3>{propertyPageItems?.title}</h3>
               <p>{propertyPageItems?.description}</p>
-              <button>Download Brochure</button>
+              <button className="brochure">Download Brochure</button>
             </div>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} className="column">
             <div className="image">
               <img src={images[0]} alt="tower-image" />
             </div>
@@ -190,20 +197,23 @@ export default function SingleProperty() {
 
       {/* Amenities */}
       <div className="amenities">
-        <h3>Amenities</h3>
-        <div className="amenities-component">
-          <Row className="amenities-grid">
-            {amenities.map((amenity, index) => (
-              <Col key={index} className="amenity-item">
-                <div className="amenity">
-                  {amenity.icon}
-                  <p>{amenity.name}</p>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </div>
-      </div>
+    <h3>Modern Amenities</h3>
+    <div className="amenities-component">
+      <Row className="amenities-grid gx-4 gy-4">
+        {amenitiesWithIcons.map((amenity, index) => (
+          <Col lg={3} key={index} className="amenity-item">
+            <div className="amenity">
+              {amenity!.icon}
+              <div className="amenity-name">
+              <p>{amenity!.name}</p>
+              </div>
+              
+            </div>
+          </Col>
+        ))}
+      </Row>
+    </div>
+  </div>
     </section>
   );
 }
