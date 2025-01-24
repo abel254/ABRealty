@@ -1,12 +1,17 @@
 .new-properties {
     margin-top: 3em;
-    padding-bottom: 3em;
     height: 110vh;
-    position: relative;
-    display: flex;
-    align-items: stretch;
 }
 .new-properties h2 {
     font-size: 1.45rem;
     color: #505050;
+}
+.new-properties .row{
+    height: 100vh;
+}
+.new-properties .column{
+    height: 50%;
+}
+.new-properties .first{
+    height: 100%; 
 }

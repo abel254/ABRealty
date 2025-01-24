@@ -9,11 +9,13 @@ import Contact from './pages/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import SingleProperty from './components/propertyComponents/singlePropertyPage/SingleProperty';
+import { PropertiesProvider } from './context/PropertyContext';
 
 
 function App() {
   return (
    <>
+   <PropertiesProvider>
    <Navbar />
    <div> 
         <Routes>
@@ -25,6 +27,8 @@ function App() {
         </Routes>
       </div>
       <Footer />
+   </PropertiesProvider>
+   
    </>
   );
 }
