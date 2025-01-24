@@ -16,17 +16,13 @@ export default function PropertyGrid({ properties = propertiesData }: NewPropert
     <section className="property-grid">
        <div className="container property">
         <h3 className='heading'>Available Properties</h3>
-       <Row className='gy-4'>
-            {properties.map((property, index) => (
-                <Col lg={4} key={index}>
+       <Row className='gy-4 gx-4'>
+            {properties.map((property) => (
+                <Col lg={4} key={property.id} className='column'>
                     <PropertyComponent property={property} isFirst={false}/>
                 </Col>
             ))}
         </Row>
-       </div>
-       <div className="single-property">
-        {/* <button>Single Property</button> */}
-        <a href="/singleProperty" className='button' target="_blank" rel="noopener noreferrer">Single Property</a>
        </div>
     </section>
     </>

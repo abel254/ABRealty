@@ -11,17 +11,12 @@
     padding-bottom: 1em;
 }
 
-.property-grid .single-property {
-    padding-top: 5em;
-    display: flex;
-    justify-content: center;
+.property-grid .row{
+    
 }
-.property-grid .single-property .button{
-    padding: .5em 3em;
-    background-color: #98cad5;
-    color: white;
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
+.property-grid .column{
+    height: 30em;
+    
 }
+    
+
