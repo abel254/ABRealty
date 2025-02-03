@@ -1,17 +1,34 @@
-import React from 'react'
-import '/FloorPlanComponent.css'
+import React from "react";
+import "./FloorPlanComponent.css";
 
-export default function FloorPlanComponent() {
+interface FloorPlanProps {
+  floorPlanImage: string;
+  floorPlanDescription?: string;
+  floorPlanBedrooms?: string;
+  floorPlanSize?: string;
+  floorPlanPrice?: string;
+}
+
+export default function FloorPlanComponent({
+  floorPlanImage,
+  floorPlanDescription,
+  floorPlanBedrooms,
+  floorPlanSize,
+  floorPlanPrice,
+}: FloorPlanProps) {
   return (
-    <div className='floor-component'>
-      <div className="image">
+    <div className="floor-component">
 
+      <div className="floor-image">
+        <img src={floorPlanImage} alt="floor-plan" />
       </div>
-      <h5>1 Bedroom</h5>
-      <div className="size">
-        <p>93 sqmt</p>
-        <p>7.9M</p>
+      <div className="floor-description">
+        <h5>{floorPlanBedrooms} Bedroom</h5>
+        <div className="floor-size">
+          <p>{floorPlanSize}sqmt</p>
+          <p>- KES {floorPlanPrice}</p>
+        </div>
       </div>
     </div>
-  )
+  );
 }

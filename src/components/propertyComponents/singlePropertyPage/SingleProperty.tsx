@@ -22,14 +22,15 @@ import { IoIosRestaurant } from "react-icons/io";
 import { RiShoppingCartFill } from "react-icons/ri";
 import { IoMdWine } from "react-icons/io";
 import { LuMoveLeft } from "react-icons/lu";
-import { FaPhone } from "react-icons/fa6";
-import { FaWhatsapp } from "react-icons/fa";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { usePropertyContext } from "../../../context/PropertyContext";
 import { propertiesData } from "../../../data/propertiesData";
 import ScrollToTopButton from "./ScrollToTopButton";
 import WhatsAppButton from "./WhatsAppButton";
 import PropertyComponent from "../../PropertyComponent";
+import FloorPlanComponent from "./floorPlanComponent/FloorPlanComponent";
+import SideBarComponent from "./sideBarComponent/SideBarComponent";
 
 export default function SingleProperty() {
   // CONTEXT
@@ -64,9 +65,8 @@ export default function SingleProperty() {
   }, [propertyPageItems]);
 
   const [selectedImage, setSelectedImage] = useState<string>(images[0] || "");
-  const [isFixed, setIsFixed] = useState(false);
-  const [isStickyStop, setIsStickyStop] = useState(false);
-  const sidebarRef = useRef<HTMLDivElement | null>(null);
+ 
+  
 
   useEffect(() => {
     if (images.length > 0) {
@@ -74,36 +74,7 @@ export default function SingleProperty() {
     }
   }, [images]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sidebarRef.current) return;
-
-      const footer = document.querySelector(
-        ".footer-components"
-      ) as HTMLElement | null;
-
-      if (!footer) return;
-
-      const footerRect = footer.getBoundingClientRect();
-
-      if (footerRect.top > window.innerHeight) {
-        setIsFixed(true);
-        setIsStickyStop(false);
-      } else if (footerRect.top <= window.innerHeight) {
-        setIsFixed(false);
-        setIsStickyStop(true);
-      } else {
-        setIsFixed(false);
-        setIsStickyStop(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+ 
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // Ensure `propertyItems` exists and is not empty
@@ -156,218 +127,243 @@ export default function SingleProperty() {
   };
 
   return (
-    <section className="single-property container">
-      <Row className="gx-4">
-        <div className="back-property">
-          <Link to={"/property"} className="back-link">
-            <LuMoveLeft />
-            <p className="back">More Properties</p>
-          </Link>
-        </div>
-        <h2 className="heading">
-          {propertyPageItems?.title}&nbsp;&nbsp;
-          {propertyPageItems?.location}
-        </h2>
-        <Col lg={8} className="main-bar">
-          <div className="hero-section">
-            {/* Image Carousel */}
-            <Carousel
-              activeIndex={images.indexOf(selectedImage)}
-              onSelect={(index) => setSelectedImage(images[index])}
-            >
-              {images.map((image, index) => (
-                <Carousel.Item key={index}>
-                  <div className="image">
-                    <Image
-                      src={image}
-                      className="hero-image"
-                      alt={`carousel-image-${index}`}
-                      fluid
-                    />
-                  </div>
-                </Carousel.Item>
-              ))}
-            </Carousel>
-
-            {/* Recycle Bin (Thumbnail Images) */}
-            <div className="recycle-bin-container mt-4">
-              <button
-                className="scroll-arrow left-arrow"
-                onClick={() => scroll("left")}
-              >
-                ‹
-              </button>
-              <div className="image-scroll" ref={scrollRef}>
-                <Row className="gx-4 flex-nowrap">
-                  {images.map((image, index) => (
-                    <Col key={index} className="d-flex justify-content-center">
-                      <Image
-                        className="image-col"
-                        src={image}
-                        alt={`thumbnail-${index}`}
-                        thumbnail
-                        style={{ cursor: "pointer", width: "100%" }}
-                        onClick={() => setSelectedImage(image)}
-                      />
-                    </Col>
-                  ))}
-                </Row>
-              </div>
-              <button
-                className="scroll-arrow right-arrow"
-                onClick={() => scroll("right")}
-              >
-                ›
-              </button>
-            </div>
-          </div>
-
-          {/* Description */}
-          <div className="description-description">
-            <Row className="gx-4">
-              <Col lg={7} className="column">
-                <div className="desc">
-                  <h3>{propertyPageItems?.title}</h3>
-                  <p>{propertyPageItems?.description}</p>
-                  <Row className="floor-plan">
-                    {}
-                    <Col lg={4} className="floor-col"></Col>
-                  </Row>
-                  <button className="brochure">Download Brochure</button>
-                </div>
-              </Col>
-              <Col lg={5} className="column">
-                <div className="image">
-                  <img src={images[0]} alt="tower-image" />
-                </div>
-              </Col>
-            </Row>
-          </div>
-
-          {/* PROPERTY DESCRIPTION */}
-          <div className="property-description">
-            <h5>Property Description</h5>
-            <div className="second-description">
-              <p>{propertyPageItems?.description}</p>
-            </div>
-            <h5 className="apartment-features">Apartment Features</h5>
-            <div className="second-features">
-              {propertyPageItems?.amenities?.map((amenity, index) => (
-                <div className="second-amenity" key={index}>
-                  <div className="second-icon"></div>
-                  {amenity}
-                </div>
-              ))}
-            </div>
-
-            <div className="second-price">
-              <p>Price From: KES</p>
-              <p>{propertyPageItems?.startingPrice}</p>
-            </div>
-            <p className="second-note">
-              Please not that ABrealty does not charge any fees for viewings.
-            </p>
-          </div>
-
-          {/* Amenities */}
-          <div className="amenities">
-            <h3>Modern Amenities</h3>
-            <div className="amenities-component">
-              <Row className="amenities-grid gx-4 gy-4">
-                {amenitiesWithIcons.map((amenity, index) => (
-                  <Col lg={3} key={index} className="amenity-item">
-                    <div className="amenity">
-                      {amenity!.icon}
-                      <div className="amenity-name">
-                        <p>{amenity!.name}</p>
-                      </div>
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-            </div>
-          </div>
-
-          {/* Similar Properties */}
-          <div className="similar-properties">
-            <div className="similar-head">
-              <h5 className="similar-heading">Similar Properties</h5>
-              <Link to={"/property"} className="similar-link">
-                More Properties
+    <>
+      <div className="section-property">
+        <section className="single-property container">
+          <Row className="gx-4">
+            <div className="back-property">
+              <Link to={"/property"} className="back-link">
+                <LuMoveLeft />
+                <p className="back">More Properties</p>
               </Link>
             </div>
-            <Row>
-              {propertiesData
-                .filter((property) => property.id !== id)
-                .slice(0, 3)
-                .map((property) => (
-                  <Col lg={4} key={property.id} className="similar-col">
-                    <PropertyComponent
-                      property={property}
-                      isFirst={false}
-                      onClick={() => {
-                        window.scrollTo({
-                          top: 0,
-                          behavior: "smooth",
-                        });
-                      }}
-                    />
-                  </Col>
-                ))}
-            </Row>
-          </div>
-        </Col>
+            <h2 className="heading">
+              {propertyPageItems?.title}&nbsp;&nbsp;
+              {propertyPageItems?.bedrooms}&nbsp;&nbsp;
+              {propertyPageItems?.location}&nbsp;&nbsp;&nbsp;&nbsp; KES{" "}
+              {Number(propertyPageItems?.startingPrice).toLocaleString()}
+            </h2>
+            <Col lg={8} className="main-bar">
+              <div className="hero-section">
+                {/* Image Carousel */}
+                <Carousel
+                  activeIndex={images.indexOf(selectedImage)}
+                  onSelect={(index) => setSelectedImage(images[index])}
+                >
+                  {images.map((image, index) => (
+                    <Carousel.Item key={index}>
+                      <div className="image">
+                        <Image
+                          src={image}
+                          className="hero-image"
+                          alt={`carousel-image-${index}`}
+                          fluid
+                        />
+                      </div>
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
 
-        {/* side bar */}
-        <Col lg={4} className="side-bar">
-          <div
-            ref={sidebarRef}
-            className={`side-profile ${isFixed ? "fixed" : ""} ${
-              isStickyStop ? "sticky-stop" : ""
-            }`}
-          >
-            <h5 className="agent-expert">Talk To A Real Estate Expert</h5>
-            <div className="profile-info">
-              <div className="profile-image">
-                <img src="/assets/abel.png" alt="" />
+                {/* Recycle Bin (Thumbnail Images) */}
+                <div className="recycle-bin-container mt-4">
+                  <button
+                    className="scroll-arrow left-arrow"
+                    onClick={() => scroll("left")}
+                  >
+                    ‹
+                  </button>
+                  <div className="image-scroll" ref={scrollRef}>
+                    <Row className="gx-4 flex-nowrap">
+                      {images.map((image, index) => (
+                        <Col
+                          key={index}
+                          className="d-flex justify-content-center"
+                        >
+                          <Image
+                            className="image-col"
+                            src={image}
+                            alt={`thumbnail-${index}`}
+                            thumbnail
+                            style={{ cursor: "pointer", width: "100%" }}
+                            onClick={() => setSelectedImage(image)}
+                          />
+                        </Col>
+                      ))}
+                    </Row>
+                  </div>
+                  <button
+                    className="scroll-arrow right-arrow"
+                    onClick={() => scroll("right")}
+                  >
+                    ›
+                  </button>
+                </div>
               </div>
-              <div className="profile-name">
-                <h5>Abel Muema</h5>
-                <p>
-                  Real Estate Sales <br /> Associate
+
+              {/* Description-Description */}
+              <div className="description-description">
+                <h3 className="description-title">
+                  {propertyPageItems?.title} - Floor Plans
+                </h3>
+                <p className="description-desc">
+                  {propertyPageItems?.floorPlans?.floorPlanDescription}
                 </p>
-              </div>
-            </div>
-            <div className="contact-form">
-              <form action="">
-                <input type="text" placeholder="Your Name" />
-                <input type="email" placeholder="Your Email" />
-                <input type="tel" placeholder="Your Phone" />
-                <textarea
-                  name=""
-                  id=""
-                  placeholder="I'm interested in..."
-                ></textarea>
-                <button>Send Email</button>
-              </form>
-            </div>
-            <div className="contact-platform">
-              <button className="call">
-                <FaPhone />
-                <p>Call</p>
-              </button>
-              <button className="whatsapp">
-                <FaWhatsapp />
-                <p>WhatsApp</p>
-              </button>
-            </div>
-          </div>
-        </Col>
-      </Row>
 
-      {/* Floating buttons */}
-      <ScrollToTopButton />
-      <WhatsAppButton />
-    </section>
+                <Row className="gx-4 first-row">
+                  <Col lg={7} className="column">
+                    <div className="desc">
+                      <Row className="floor-plan gx-4 gy-4">
+                        {propertyPageItems.floorPlans?.floorPlanImage?.map(
+                          (image, index) => (
+                            <Col key={index} lg={6} className="floor-col">
+                              <FloorPlanComponent
+                                floorPlanImage={image}
+                                floorPlanDescription={
+                                  propertyPageItems.floorPlans
+                                    ?.floorPlanDescription
+                                }
+                                floorPlanBedrooms={
+                                  propertyPageItems.floorPlans
+                                    ?.floorPlanBedrooms?.[index]
+                                }
+                                floorPlanSize={
+                                  propertyPageItems.floorPlans?.floorPlanSize?.[
+                                    index
+                                  ]
+                                }
+
+                                floorPlanPrice={
+                                  propertyPageItems.floorPlans
+                                    ?.floorPlanPrice?.[index]
+                                    ? Number(propertyPageItems.floorPlans.floorPlanPrice[index]).toLocaleString() : ""
+                                }
+                              />
+                            </Col>
+                          )
+                        )}
+                      </Row>
+                    </div>
+                  </Col>
+                  <Col lg={5} className="column">
+                    <div className="image">
+                      <img src={images[0]} alt="tower-image" />
+                      <button className="brochure-button">
+                        Download Brochure
+                      </button>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+
+              {/* PROPERTY DESCRIPTION */}
+              <div className="property-description">
+                <h5>Property Description</h5>
+                <div className="second-description">
+                  <p>{propertyPageItems?.description}</p>
+                </div>
+                <h5 className="apartment-features">Apartment Features</h5>
+                <div className="second-features">
+                  {propertyPageItems?.amenities?.map((amenity, index) => (
+                    <div className="second-amenity" key={index}>
+                      <div className="second-icon"></div>
+                      {amenity}
+                    </div>
+                  ))}
+                </div>
+                <h5 className="apartment-features">Additional Features</h5>
+                <div className="second-features">
+                  {propertyPageItems?.features?.map((feature, index) =>(
+                     <div className="second-amenity" key={index}>
+                     <div className="second-icon"></div>
+                     {feature}
+                   </div>
+                  ))}
+                </div>
+                <h5 className="apartment-features">Flexible Payment Plan</h5>
+                <div className="second-features">
+                  {propertyPageItems?.paymentPlan?.map((plan, index) =>(
+                     <div className="second-amenity" key={index}>
+                     <div className="second-icon"></div>
+                     {plan}
+                   </div>
+                  ))}
+                </div>
+
+                <div className="second-price">
+                  <p>Price From: KES</p>
+                  <p>{Number(propertyPageItems?.startingPrice).toLocaleString()}</p>
+                </div>
+                <p className="second-note">
+                  Please not that ABrealty does not charge any fees for
+                  viewings.
+                </p>
+                <div className="agent-desc">
+                <p className="agent-info">
+                  Contact our real estate expert for more inquiries, advice, and guidance:
+                  <span> Abel Muema</span> <span>  +254 712 313980</span> <span>  abelthereator47@gmail.com</span>
+                </p>
+                </div>
+                
+              </div>
+
+              {/* Amenities */}
+              <div className="amenities">
+                <h3>Available Modern Amenities</h3>
+                <div className="amenities-component">
+                  <Row className="amenities-grid gx-4 gy-4">
+                    {amenitiesWithIcons.map((amenity, index) => (
+                      <Col lg={3} key={index} className="amenity-item">
+                        <div className="amenity">
+                          {amenity!.icon}
+                          <div className="amenity-name">
+                            <p>{amenity!.name}</p>
+                          </div>
+                        </div>
+                      </Col>
+                    ))}
+                  </Row>
+                </div>
+              </div>
+
+              {/* Similar Properties */}
+              <div className="similar-properties">
+                <div className="similar-head">
+                  <h5 className="similar-heading">Similar Properties</h5>
+                  <Link to={"/property"} className="similar-link">
+                    More Properties
+                  </Link>
+                </div>
+                <Row>
+                  {propertiesData
+                    .filter((property) => property.id !== id)
+                    .slice(0, 3)
+                    .map((property) => (
+                      <Col lg={4} key={property.id} className="similar-col">
+                        <PropertyComponent
+                          property={property}
+                          isFirst={false}
+                          onClick={() => {
+                            window.scrollTo({
+                              top: 0,
+                              behavior: "smooth",
+                            });
+                          }}
+                        />
+                      </Col>
+                    ))}
+                </Row>
+              </div>
+            </Col>
+
+            {/* side bar */}
+            <SideBarComponent />
+          </Row>
+
+          {/* Floating buttons */}
+          <ScrollToTopButton />
+          <WhatsAppButton />
+        </section>
+      </div>
+    </>
   );
 }

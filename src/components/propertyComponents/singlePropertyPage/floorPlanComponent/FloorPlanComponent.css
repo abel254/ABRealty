@@ -1,0 +1,41 @@
+.floor-component {
+    height: 100%;
+    width: 100%;
+    box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    padding: .7em;
+}
+.floor-component .floor-image{
+    height: 82%;
+    width: 100%;
+    overflow: hidden;
+   
+}
+.floor-component .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.floor-component .floor-description{
+    padding: .5em;
+}
+.floor-component .floor-description h5{
+    font-size: .8rem;
+    text-align: start;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 1.3px;
+    color: var(--blue-heading);
+    font-weight: bold;
+    padding-top: .3em;
+}
+.floor-component .floor-description .floor-size{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: .3em;
+}
+.floor-component .floor-description .floor-size p{
+    font-size: .6rem;
+    color: var(--blue-heading);
+}

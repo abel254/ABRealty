@@ -1,0 +1,123 @@
+.side-bar {
+    padding: 0 1.5em;
+   
+  }
+  .side-bar .side-profile {
+    height: 36em;
+    width: 27%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 4px;
+    padding: 1em;
+    padding-left: 2em;
+    margin-top: 1.5em;
+    position: relative;
+  }
+  .side-bar .side-profile.fixed {
+    position: fixed;
+    top: 12em;
+    width: 27%;
+  }
+  .side-bar .side-profile.sticky-stop {
+    position: absolute;
+    bottom: 5em;
+    width: 29.5%;
+  }
+  
+  .side-bar .side-profile .agent-expert {
+    color: var(--blue-heading);
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--border-gray);
+    padding: 0.5em;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    border-radius: 4px;
+  }
+  .side-bar .profile-info {
+    display: flex;
+    margin-top: 1em;
+  }
+  .side-bar .profile-info .profile-name .agent-name{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: .2em;
+  }
+  .side-bar .profile-info .profile-name .agent-position{
+    font-size: .85rem;
+    letter-spacing: .5px;
+  }
+  .profile-info .profile-image {
+    width: 5em;
+    height: 5em;
+    border-radius: 5px;
+    margin-right: 1em;
+  }
+  .profile-info .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .side-profile .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  .side-profile .contact-form form input {
+    padding: 0.5em 1em;
+    margin-bottom: 0.5em;
+    outline: none;
+    border: 1px solid #cfcaca;
+    border-radius: 5px;
+  }
+  .side-profile .contact-form form textarea {
+    padding: 0.5em 1em;
+    margin-bottom: 0.5em;
+    outline: none;
+    border: 1px solid #cfcaca;
+    border-radius: 5px;
+    height: 9em;
+  }
+  .side-profile .contact-form form button {
+    padding: 0.5em 0;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: var(--skyblue-dark);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .side-profile .contact-form form button:hover {
+    background-color: #34697a;
+    transform: scale(1.05);
+  }
+  .side-profile .contact-platform {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 1em;
+  }
+  .side-profile .contact-platform button {
+    border: 1px solid var(--skyblue-dark);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 0;
+    border-radius: 5px;
+    gap: 5px;
+    background-color: transparent;
+    color: var(--skyblue-dark);
+  }
+  .side-profile .contact-platform .call p,
+  .whatsapp p {
+    margin: 0;
+  }
+  .side-profile .contact-platform svg {
+    color: var(--skyblue-dark);
+  }
+  
+  
+  

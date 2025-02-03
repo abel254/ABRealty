@@ -2,6 +2,7 @@
 .property-component{
   height: 100%;
   position: relative;
+  background-color: white;
 }
 .property-component .card-component{
   height: 100%;
