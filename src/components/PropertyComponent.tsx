@@ -7,12 +7,14 @@ import { usePropertyContext } from "../context/PropertyContext";
 
 interface PropertyComponentProps {
   property: PropertyType;
-  isFirst: boolean; // Optional prop to apply specific styling to the first property
+  isFirst: boolean;
+  onClick?: () => void;
 }
 
 export default function PropertyComponent({
   property,
   isFirst,
+  onClick,
 }: PropertyComponentProps) {
   const { id, images, title, location, description, startingPrice } = property;
 
@@ -26,7 +28,11 @@ export default function PropertyComponent({
     <div className={`property-component ${isFirst ? "first-property" : ""}`}>
       <button
         className="card-component"
-        onClick={() => addProperty(id)}
+        onClick={() => {
+          addProperty(id)
+          if (onClick) onClick();
+        }
+        }
       >
         <Link to={"/singleProperty"} className="links">
           <div className="property-card h-100 d-flex flex-column">

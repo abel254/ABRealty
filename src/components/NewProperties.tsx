@@ -18,14 +18,24 @@ export default function NewProperties({
         <div className="row gx-4 gy-4">
           {/* First large property card occupying 50% of section width */}
           <div className="first col-lg-6">
-            <PropertyComponent property={properties[0]} isFirst={true} />
+            <PropertyComponent property={properties[0]} isFirst={true} onClick={() => {
+                window.scrollTo({
+                  top:0,
+                  behavior: "smooth",
+                })
+              }}/>
           </div>
           {/* Grid of remaining 4 property cards */}
           <div className="col-lg-6 column">
             <div className="row gx-4 gy-4">
               {properties.slice(1,5).map((property, index) => (
                 <div className="col-md-6 column" key={index}>
-                  <PropertyComponent property={property} isFirst={false} />
+                  <PropertyComponent property={property} isFirst={false} onClick={() => {
+                window.scrollTo({
+                  top:0,
+                  behavior: "smooth",
+                })
+              }}/>
                 </div>
               ))}
             </div>
