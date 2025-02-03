@@ -20,7 +20,7 @@ export default function PropertyGrid({ properties = propertiesData }: NewPropert
     <>
     <section className="property-grid">
        <div className="container property">
-        <h3 className='heading'>Available Properties</h3>
+        <h3 className='heading'>Available Properties For Sale</h3>
        <Row className='gy-4 gx-4'>
             {properties.map((property) => (
                 <Col lg={4} key={property.id} className='column'>
