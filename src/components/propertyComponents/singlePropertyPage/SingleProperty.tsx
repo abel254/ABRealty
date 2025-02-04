@@ -65,8 +65,6 @@ export default function SingleProperty() {
   }, [propertyPageItems]);
 
   const [selectedImage, setSelectedImage] = useState<string>(images[0] || "");
- 
-  
 
   useEffect(() => {
     if (images.length > 0) {
@@ -74,7 +72,6 @@ export default function SingleProperty() {
     }
   }, [images]);
 
- 
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // Ensure `propertyItems` exists and is not empty
@@ -231,11 +228,14 @@ export default function SingleProperty() {
                                     index
                                   ]
                                 }
-
                                 floorPlanPrice={
                                   propertyPageItems.floorPlans
                                     ?.floorPlanPrice?.[index]
-                                    ? Number(propertyPageItems.floorPlans.floorPlanPrice[index]).toLocaleString() : ""
+                                    ? Number(
+                                        propertyPageItems.floorPlans
+                                          .floorPlanPrice[index]
+                                      ).toLocaleString()
+                                    : ""
                                 }
                               />
                             </Col>
@@ -272,38 +272,42 @@ export default function SingleProperty() {
                 </div>
                 <h5 className="apartment-features">Additional Features</h5>
                 <div className="second-features">
-                  {propertyPageItems?.features?.map((feature, index) =>(
-                     <div className="second-amenity" key={index}>
-                     <div className="second-icon"></div>
-                     {feature}
-                   </div>
+                  {propertyPageItems?.features?.map((feature, index) => (
+                    <div className="second-amenity" key={index}>
+                      <div className="second-icon"></div>
+                      {feature}
+                    </div>
                   ))}
                 </div>
                 <h5 className="apartment-features">Flexible Payment Plan</h5>
                 <div className="second-features">
-                  {propertyPageItems?.paymentPlan?.map((plan, index) =>(
-                     <div className="second-amenity" key={index}>
-                     <div className="second-icon"></div>
-                     {plan}
-                   </div>
+                  {propertyPageItems?.paymentPlan?.map((plan, index) => (
+                    <div className="second-amenity" key={index}>
+                      <div className="second-icon"></div>
+                      {plan}
+                    </div>
                   ))}
                 </div>
 
                 <div className="second-price">
                   <p>Price From: KES</p>
-                  <p>{Number(propertyPageItems?.startingPrice).toLocaleString()}</p>
+                  <p>
+                    {Number(propertyPageItems?.startingPrice).toLocaleString()}
+                  </p>
                 </div>
                 <p className="second-note">
                   Please not that ABrealty does not charge any fees for
                   viewings.
                 </p>
                 <div className="agent-desc">
-                <p className="agent-info">
-                  Contact our real estate expert for more inquiries, advice, and guidance:
-                  <span> Abel Muema</span> <span>  +254 712 313980</span> <span>  abelthereator47@gmail.com</span>
-                </p>
+                  <p className="agent-info">
+                    Contact our real estate expert for more inquiries, advice,
+                    and guidance:
+                    <span> Abel Muema</span>{" "}
+                    <span>&nbsp;&nbsp; +254 712 313980</span>{" "}
+                    <span className="agent-email"> <Link to={'/'}>abelthereator47@gmail.com</Link></span>
+                  </p>
                 </div>
-                
               </div>
 
               {/* Amenities */}

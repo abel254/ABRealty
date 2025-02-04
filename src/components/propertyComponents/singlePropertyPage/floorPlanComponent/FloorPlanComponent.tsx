@@ -11,7 +11,6 @@ interface FloorPlanProps {
 
 export default function FloorPlanComponent({
   floorPlanImage,
-  floorPlanDescription,
   floorPlanBedrooms,
   floorPlanSize,
   floorPlanPrice,
