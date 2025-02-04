@@ -51,7 +51,7 @@ export default function SideBarComponent() {
                   isStickyStop ? "sticky-stop" : ""
                 }`}
               >
-                <h5 className="agent-expert">Talk To Our Real Estate Expert</h5>
+                <h5 className="agent-expert">Get Quality Advice From An Expert</h5>
                 <div className="profile-info">
                   <div className="profile-image">
                     <img src="/assets/abel.png" alt="" />
@@ -71,7 +71,7 @@ export default function SideBarComponent() {
                     <textarea
                       name=""
                       id=""
-                      placeholder="I'm interested in..."
+                      placeholder="I'm interested in 1 bed..."
                     ></textarea>
                     <button>Send Email</button>
                   </form>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './AboutUsHome.css'
+import { Link } from 'react-router-dom'
 
 export default function AboutUsHome() {
   return (
@@ -12,7 +13,7 @@ export default function AboutUsHome() {
                 <div className="about-info">
                 <h4>We're committed to your ideal property investment.</h4>
                 <p>At ABRealty, we help you find ideal property investments by focusing on prime locations, superior quality, and promising ROI.</p>
-                <button>About Us</button>
+                <Link to={'/about-us'} className='link-about'>About Us</Link>
                 </div>
             </div>
             </Col>

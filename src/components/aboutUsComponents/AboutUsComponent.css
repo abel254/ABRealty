@@ -1,0 +1,123 @@
+.section-about {
+  margin-top: 5.7em;
+  margin-bottom: 3em;
+}
+.about-component {
+  width: 100%;
+}
+.about-component .about-banner {
+  height: 18em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.about-component .about-banner .about-heading {
+  position: absolute;
+  margin-left: 6em;
+  color: white;
+}
+.about-component .about-banner .p-about {
+    font-size: .8rem;
+    margin-bottom: .5px;
+}
+.about-component .about-banner .h3-about {
+    font-size: 2.4rem;
+    letter-spacing: .8px;
+    font-weight: bold;
+}
+.about-component .about-banner .about-overlay {
+  width: 100%;
+  height: 18em;
+  position: absolute;
+  background-color: var(--blue-heading);
+  opacity: 0.5;
+}
+.about-component .about-banner .banner-image {
+  width: 100%;
+  height: 100%;
+  
+}
+.about-component .about-banner .banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* about-description */
+.about-component .about-description{
+    margin-top: 3em;
+    height: 25em;
+    padding: 0 5em;
+}
+.about-description .description-image{
+    height: 100%;
+}
+.about-description .description-image img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+.about-description .about-info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 1em;
+}
+.about-description .about-info h4{
+    margin-bottom: 0;
+    color: var(--blue-heading);
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+.about-description .about-info .p-agency{
+    margin-bottom: 1.5em;
+    letter-spacing: .8px;
+    font-size: .92rem;
+    color: rgb(157, 155, 155);
+}
+.about-description .about-info p{
+    color: var(--p-gray);
+    letter-spacing: .8px;
+    font-size: .92rem;
+    line-height: 1.7;
+}
+
+/* about-contact */
+.about-component .about-contact{
+    margin-top: 5em;
+    height: 9em;
+    background-color: var(--blue-heading);
+}
+.about-component .about-contact .about-cont{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5em;
+    justify-content: space-between;
+}
+.about-contact .about-cont h3{
+    color: white;
+    font-weight: bold;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+.about-contact .about-cont p{
+    color: white;
+    letter-spacing: .5px;
+}
+.about-contact .about-cont .about-link{
+    text-decoration: none;
+    background-color: white;
+    padding: 1em 1.5em;
+    color: var(--blue-heading);
+    border-radius: 25px;
+    transition: all 0.3s ease, transform 0.3s ease-in-out;
+}
+.about-contact .about-cont .about-link:hover{
+    background-color: green;
+    color: white;
+}

@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import SingleProperty from './components/propertyComponents/singlePropertyPage/SingleProperty';
 import { PropertiesProvider } from './context/PropertyContext';
+import AboutUs from './pages/AboutUs';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/blog" element={<Blog/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/singleProperty" element={<SingleProperty/>}/>
+          <Route path="/about-us" element={<AboutUs/>}/>
         </Routes>
       </div>
       <Footer />

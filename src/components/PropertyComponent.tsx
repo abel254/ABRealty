@@ -47,7 +47,8 @@ export default function PropertyComponent({
               <p className="description">{slicedDescription}...</p>
               <div className="start-price">
               <p className="price">
-                KES&nbsp;{startingPrice}
+                KES&nbsp;
+                {Number(startingPrice).toLocaleString()}
               </p>
               <p className="start">&nbsp;Starting Price</p>
               </div>

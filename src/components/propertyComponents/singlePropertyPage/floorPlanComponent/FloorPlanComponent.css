@@ -17,7 +17,8 @@
     object-fit: cover;
 }
 .floor-component .floor-description{
-    padding: .5em;
+    margin-top: .5em;
+    border-top: 1px solid rgb(188, 184, 184);
 }
 .floor-component .floor-description h5{
     font-size: .8rem;

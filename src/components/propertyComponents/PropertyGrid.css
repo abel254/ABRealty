@@ -9,6 +9,7 @@
     text-align: center;
     letter-spacing: .05rem;
     padding-bottom: 1em;
+    color: var(--blue-heading);
 }
 
 .property-grid .column{
