@@ -6,6 +6,7 @@
     left: 0;
     width: 100%;
     z-index: 99;
+    font-family: "Poppins", serif;
 }
 .nav{
     display: flex;

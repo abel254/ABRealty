@@ -2,13 +2,18 @@ import React, { useLayoutEffect } from "react";
 import "./AboutUsComponent.css";
 import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FaLocationDot } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { FaPinterest } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function AboutUsComponent() {
+  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0);
+  // });
 
-     useLayoutEffect(()=> {
-        window.scrollTo(0, 0)
-      })
-      
   return (
     <>
       <section className="section-about">
@@ -29,7 +34,9 @@ export default function AboutUsComponent() {
               <Col lg={6} className="h-100">
                 <div className="about-info">
                   <h4>Our Agency Story</h4>
-                  <p className="p-agency">Ideal company for your next Investment</p>
+                  <p className="p-agency">
+                    Ideal company for your next Investment
+                  </p>
                   <p>
                     At ABRealty, we help you find ideal property investments by
                     focusing on prime locations, superior quality, and promising
@@ -55,12 +62,60 @@ export default function AboutUsComponent() {
 
           <div className="about-contact">
             <div className="about-cont">
-                <div>
-                    <h3>Do You Have Any Questions ?</h3>
-                    <p>We'll help you to take the best opportunity</p>
-                </div>
-                <Link to={'/contact-us'} className="about-link">Contact Us Today</Link>
+              <div>
+                <h3>Do You Have Any Questions ?</h3>
+                <p>We'll help you to take the best opportunity</p>
+              </div>
+              <Link to={"/contact"} className="about-link">
+                Contact Us Today
+              </Link>
             </div>
+          </div>
+
+          <div className="featured-agents">
+            <h3>Our Featured Agents</h3>
+            <p className="featured-p">
+              Meet our featured agents, a team of dedicated professionals
+              committed to helping you find the perfect property. With a
+              client-focused approach, they provide personalized property
+              recommendations and seamless guidance throughout your real estate
+              journey.
+            </p>
+            <Row className="gap-4">
+              <Col lg={4}>
+                <div className="agent-details">
+                  <div className="agent-image">
+                    <img src="/assets/abel.png" alt="" />
+                  </div>
+                  <div className="agent-location">
+                    <FaLocationDot />
+                    <p>Westlands Nairobi, Kenya</p>
+                  </div>
+                  <p className="agent-name">Abel K. Muema</p>
+                  <div className="agent-media">
+                    <div className="media">
+                      {" "}
+                      <FaFacebookF />
+                    </div>
+                    <div className="media">
+                      <FaInstagram />
+                    </div>
+                    <div className="media">
+                      <FaPinterest />
+                    </div>
+                  </div>
+                  <div className="agent-contact">
+                    <div className="message">
+                      <FaWhatsapp />
+                      <p>Message</p>
+                    </div>
+                    <div className="call">
+                      <FaPhone />
+                    </div>
+                  </div>
+                </div>
+              </Col>
+            </Row>
           </div>
         </div>
       </section>

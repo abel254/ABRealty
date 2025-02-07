@@ -1,6 +1,7 @@
 .top-banner{
     position: relative;
     margin-top: -4em;
+    font-family: "Poppins", serif;
 }
 .top-banner .intro{
     background-color: #98cad5;

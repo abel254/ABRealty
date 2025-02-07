@@ -1,0 +1,136 @@
+.section-contact {
+  margin-top: 5.7em;
+  margin-bottom: 3em;
+  font-family: "Poppins", serif;
+}
+.contact-component {
+  width: 100%;
+}
+.contact-component .contact-banner {
+  height: 18em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.contact-component .contact-banner .contact-heading {
+  position: absolute;
+  margin-left: 6em;
+  color: white;
+}
+.contact-component .contact-banner .p-contact {
+  font-size: 0.8rem;
+  margin-bottom: 0.5px;
+}
+.contact-component .contact-banner .h3-contact {
+  font-size: 2.4rem;
+  letter-spacing: 0.8px;
+  font-weight: bold;
+}
+.contact-component .contact-banner .contact-overlay {
+  width: 100%;
+  height: 18em;
+  position: absolute;
+  background-color: var(--blue-heading);
+  opacity: 0.5;
+}
+.contact-component .contact-banner .banner-image {
+  width: 100%;
+  height: 100%;
+}
+.contact-component .contact-banner .contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+/* contact form */
+.contact-component .contact-info {
+  margin: 5em 5em;
+  padding: 2em;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+.contact-component .contact-info h5 {
+  margin-bottom: 2em;
+  font-size: 1rem;
+  color: var(--blue-heading);
+}
+.contact-component .contact-info .form-info {
+  display: flex;
+  flex-direction: column;
+}
+.contact-component .contact-info .name-email {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+.contact-component .contact-info .name-email input {
+  width: 100%;
+  padding: 0.3em 0.5em;
+  outline: none;
+  border: 1px solid #cfcaca;
+  border-radius: 3px;
+}
+.contact-component .contact-info .form-info .subject-input {
+  padding: 0.3em 0.5em;
+  outline: none;
+  border: 1px solid #cfcaca;
+  margin-bottom: 1.5em;
+  border-radius: 3px;
+}
+.contact-component .contact-info .form-info textarea {
+  padding: 0.3em 0.5em;
+  outline: none;
+  border: 1px solid #cfcaca;
+  margin-bottom: 1.5em;
+  border-radius: 3px;
+}
+.contact-component .contact-info button {
+  border: none;
+  padding: 0.7em 2em;
+  background-color: var(--skyblue-dark);
+  color: white;
+  border-radius: 5px;
+}
+.contact-component .contact-info button:hover {
+  background-color: #34697a;
+  transform: scale(1.05);
+}
+
+/* contact about */
+.contact-component .contact-about {
+  margin-top: 5em;
+  height: 9em;
+  background-color: var(--skyblue-dark);
+}
+.contact-component .contact-about .about-cont {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 5em;
+  justify-content: space-between;
+}
+.contact-component .contact-about .about-cont h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+.contact-component .contact-about .about-cont p {
+  color: white;
+  letter-spacing: 0.5px;
+}
+.contact-component .contact-about .about-cont .about-link {
+  text-decoration: none;
+  background-color: white;
+  padding: 1em 1.5em;
+  color: var(--skyblue-dark);
+  border-radius: 30px;
+  transition: all 0.3s ease, transform 0.3s ease-in-out;
+}
+.contact-component .contact-about .about-cont .about-link:hover {
+  background-color: #34697a;
+  color: white;
+}

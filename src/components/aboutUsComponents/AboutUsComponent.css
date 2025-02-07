@@ -1,6 +1,7 @@
 .section-about {
   margin-top: 5.7em;
   margin-bottom: 3em;
+  font-family: "Poppins", serif;
 }
 .about-component {
   width: 100%;
@@ -18,13 +19,13 @@
   color: white;
 }
 .about-component .about-banner .p-about {
-    font-size: .8rem;
-    margin-bottom: .5px;
+  font-size: 0.8rem;
+  margin-bottom: 0.5px;
 }
 .about-component .about-banner .h3-about {
-    font-size: 2.4rem;
-    letter-spacing: .8px;
-    font-weight: bold;
+  font-size: 2.4rem;
+  letter-spacing: 0.8px;
+  font-weight: bold;
 }
 .about-component .about-banner .about-overlay {
   width: 100%;
@@ -36,7 +37,6 @@
 .about-component .about-banner .banner-image {
   width: 100%;
   height: 100%;
-  
 }
 .about-component .about-banner .banner-image img {
   width: 100%;
@@ -45,79 +45,184 @@
 }
 
 /* about-description */
-.about-component .about-description{
-    margin-top: 3em;
-    height: 25em;
-    padding: 0 5em;
+.about-component .about-description {
+  margin-top: 3em;
+  height: 25em;
+  padding: 0 5em;
 }
-.about-description .description-image{
-    height: 100%;
+.about-description .description-image {
+  height: 100%;
 }
-.about-description .description-image img{
-    width: 100%;
+.about-description .description-image img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: bottom;
 }
-.about-description .about-info{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 1em;
+.about-description .about-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 1em;
 }
-.about-description .about-info h4{
-    margin-bottom: 0;
-    color: var(--blue-heading);
-    font-size: 2rem;
-    letter-spacing: 1.5px;
-    font-weight: bold;
+.about-description .about-info h4 {
+  margin-bottom: 0;
+  color: var(--blue-heading);
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  font-weight: bold;
 }
-.about-description .about-info .p-agency{
-    margin-bottom: 1.5em;
-    letter-spacing: .8px;
-    font-size: .92rem;
-    color: rgb(157, 155, 155);
+.about-description .about-info .p-agency {
+  margin-bottom: 1.5em;
+  letter-spacing: 0.8px;
+  font-size: 0.92rem;
+  color: rgb(157, 155, 155);
 }
-.about-description .about-info p{
-    color: var(--p-gray);
-    letter-spacing: .8px;
-    font-size: .92rem;
-    line-height: 1.7;
+.about-description .about-info p {
+  color: var(--p-gray);
+  letter-spacing: 0.8px;
+  font-size: 0.92rem;
+  line-height: 1.7;
 }
 
 /* about-contact */
-.about-component .about-contact{
-    margin-top: 5em;
-    height: 9em;
-    background-color: var(--blue-heading);
+.about-component .about-contact {
+  margin-top: 5em;
+  height: 9em;
+  background-color: var(--blue-heading);
 }
-.about-component .about-contact .about-cont{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 5em;
-    justify-content: space-between;
+.about-component .about-contact .about-cont {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 5em;
+  justify-content: space-between;
 }
-.about-contact .about-cont h3{
-    color: white;
-    font-weight: bold;
-    font-size: 2.2rem;
-    letter-spacing: 1px;
+.about-contact .about-cont h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
 }
-.about-contact .about-cont p{
-    color: white;
-    letter-spacing: .5px;
+.about-contact .about-cont p {
+  color: white;
+  letter-spacing: 0.5px;
 }
-.about-contact .about-cont .about-link{
-    text-decoration: none;
-    background-color: white;
-    padding: 1em 1.5em;
-    color: var(--blue-heading);
-    border-radius: 25px;
-    transition: all 0.3s ease, transform 0.3s ease-in-out;
+.about-contact .about-cont .about-link {
+  text-decoration: none;
+  background-color: white;
+  padding: 1em 1.5em;
+  color: var(--blue-heading);
+  border-radius: 30px;
+  transition: all 0.3s ease, transform 0.3s ease-in-out;
 }
-.about-contact .about-cont .about-link:hover{
-    background-color: green;
-    color: white;
+.about-contact .about-cont .about-link:hover {
+  background-color: #051b3d;
+  color: white;
+}
+
+/* Agent Information */
+.about-component .featured-agents {
+  margin-top: 1em;
+  padding: 5em;
+  padding-bottom: 0;
+}
+.about-component .featured-agents h3 {
+  font-weight: bold;
+  color: var(--blue-heading);
+  text-align: center;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+.about-component .featured-agents .featured-p {
+  text-align: center;
+  padding: 0 13em;
+  color: var(--p-gray);
+  letter-spacing: 1px;
+  margin-bottom: 2.5em;
+}
+.about-component .featured-agents .agent-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 3em;
+  margin: 1em;
+  padding-top: 4em;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.featured-agents .agent-details .agent-image {
+  height: 8em;
+  width: 8em;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #cfcaca;
+  padding: 0.5em;
+  margin-bottom: 0.7em;
+}
+.featured-agents .agent-details .agent-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.featured-agents .agent-details .agent-location {
+  display: flex;
+  gap: 0.3em;
+  font-size: 0.8rem;
+  color: var(--p-gray);
+}
+.featured-agents .agent-details .agent-location p {
+  margin-bottom: 0.8em;
+}
+.featured-agents .agent-details .agent-name {
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.65px;
+}
+.featured-agents .agent-details .agent-media {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin-bottom: 1em;
+}
+.featured-agents .agent-details .agent-media .media {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e1e1;
+}
+.featured-agents .agent-details .agent-media .media svg {
+  color: var(--p-gray);
+  font-size: 1.1em;
+}
+.featured-agents .agent-details .agent-contact{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.featured-agents .agent-details .agent-contact .message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .3em;
+  background-color: green;
+  color: white;
+  padding: .8em 1.2em;
+  border-radius: 5px;
+}
+.featured-agents .agent-details .agent-contact .message p{
+  margin: 0;
+}
+.featured-agents .agent-details .agent-contact .call{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: .8em 1.9em;
+  border-radius: 5px;
 }
