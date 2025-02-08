@@ -43,50 +43,6 @@ export default function SideBarComponent() {
 
   return (
     <>
-      {/* <Col lg={4} className="side-bar">
-        <div
-          ref={sidebarRef}
-          className={`side-profile ${isFixed ? "fixed" : ""} ${
-            isStickyStop ? "sticky-stop" : ""
-          }`}
-        >
-          <h5 className="agent-expert">Get Quality Advice From An Expert</h5>
-          <div className="profile-info">
-            <div className="profile-image">
-              <img src="/assets/abel.png" alt="" />
-            </div>
-            <div className="profile-name">
-              <h5 className="agent-name">Abel Muema</h5>
-              <p className="agent-position">
-                Real Estate Sales <br /> Associate
-              </p>
-            </div>
-          </div>
-          <div className="contact-form">
-            <form action="">
-              <input type="text" placeholder="Your Name" />
-              <input type="email" placeholder="Your Email" />
-              <input type="tel" placeholder="Your Phone" />
-              <textarea
-                name=""
-                id=""
-                placeholder="I'm interested in 1 bed..."
-              ></textarea>
-              <button>Send Email</button>
-            </form>
-          </div>
-          <div className="contact-platform">
-            <button className="call">
-              <FaPhone />
-              <p>Call</p>
-            </button>
-            <button className="whatsapp">
-              <FaWhatsapp />
-              <p>WhatsApp</p>
-            </button>
-          </div>
-        </div>
-      </Col> */}
 
       <Col lg={4} className="side-bar">
         <div
@@ -106,9 +62,9 @@ export default function SideBarComponent() {
 
             <div className="contact-form">
               <form action="">
-                <input type="text" placeholder="Your Name" />
-                <input type="email" placeholder="Your Email" />
-                <input type="tel" placeholder="Your Phone" />
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="tel" placeholder="Phone" />
                 <textarea
                   name=""
                   id=""
