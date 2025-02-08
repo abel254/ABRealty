@@ -10,9 +10,9 @@ import { FaPhone } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function AboutUsComponent() {
-  // useLayoutEffect(() => {
-  //   window.scrollTo(0, 0);
-  // });
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <>

@@ -1,14 +1,16 @@
 import React, { useLayoutEffect } from "react";
 import "./ContactComponent.css";
 import { Link } from "react-router-dom";
+import { FaPhone } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 export default function ContactComponent() {
+  
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
-   useLayoutEffect(()=> {
-          window.scrollTo(0, 0)
-        })
-
-        
   return (
     <>
       <section className="section-contact">
@@ -34,7 +36,7 @@ export default function ContactComponent() {
                 </div>
                 <input
                   type="text"
-                  placeholder="Subject"
+                  placeholder="Phone "
                   className="subject-input"
                 />
                 <textarea
@@ -46,15 +48,31 @@ export default function ContactComponent() {
               </div>
               <button type="submit">Submit Request</button>
             </form>
+            <div className="contact-details">
+              <div className="details-details">
+                <FaPhone />
+                <p>+254712313980</p>
+              </div>
+              <div className="details-details">
+                <MdEmail />
+                <p>abeltherealtor47@gmail.com</p>
+              </div>
+              <div className="details-details">
+                <FaLocationDot />
+                Westlands Nairobi, Kenya
+              </div>
+            </div>
           </div>
 
           <div className="contact-about">
             <div className="about-cont">
-                <div>
-                    <h3>About Us - Who We Are!</h3>
-                    <p>Ideal company for your next investment opportunity</p>
-                </div>
-                <Link to={'/about-us'} className="about-link">Learn About Us</Link>
+              <div>
+                <h3>About Us - Who We Are!</h3>
+                <p>Ideal company for your next investment opportunity</p>
+              </div>
+              <Link to={"/about-us"} className="about-link">
+                Learn About Us
+              </Link>
             </div>
           </div>
         </div>

@@ -98,6 +98,24 @@
   background-color: #34697a;
   transform: scale(1.05);
 }
+.contact-component .contact-details{
+  border-top: 2px solid var(--blue-heading);
+  margin-top: 6em;
+  padding-top: 1.5em;
+}
+.contact-component .contact-details .details-details {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: .7em;
+  font-size: .9rem;
+  color: var(--p-gray);
+}
+.contact-component .contact-details .details-details p{
+  margin: 0;
+  letter-spacing: 1px;
+}
+
 
 /* contact about */
 .contact-component .contact-about {

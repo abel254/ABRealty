@@ -1,5 +1,4 @@
 .section-property{
-  background-color: rgb(240, 243, 245);
   font-family: "Poppins", serif;
 }
 .single-property {
@@ -11,17 +10,15 @@
 }
 .single-property .back-property {
   padding-top: .4em;
-  border-bottom: 1px solid rgb(226, 223, 223);
-  padding-bottom: .5em;
 }
 .single-property .back-property .back-link {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: green;
+  color: var(--blue-heading);
   transition: all 0.3s ease-in-out;
-  border: 1px solid green;
+  border: 1px solid var(--blue-heading);
   width: 11%;
   padding: .3em 0;
   border-radius: 4px;
@@ -43,17 +40,15 @@
 .single-property .heading {
   text-align: start;
   font-weight: bold;
-  letter-spacing: 2.3px;
   word-spacing: 0.1rem;
-  font-size: 2.3rem;
-  line-height: 1.4;
+  font-size: 2.2rem;
+  line-height: 1.3;
   color: var(--blue-heading);
 }
-
-.single-property .heading span {
-  font-weight: 100;
-  font-size: 2.2rem;
+.single-property .heading-kes{
+  margin-left: .7em;
 }
+
 .single-property .carousel .image {
   width: 100%;
   height: 60vh;
