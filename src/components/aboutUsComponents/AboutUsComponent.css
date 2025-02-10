@@ -115,7 +115,7 @@
   padding: 1em 1.5em;
   color: var(--blue-heading);
   border-radius: 30px;
-  transition: all 0.3s ease, transform 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 .about-contact .about-cont .about-link:hover {
   background-color: #051b3d;

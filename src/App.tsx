@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import { Route, Routes } from "react-router-dom";
-import Navbar from './components/Navbar';
+import Navbar from './components/header/Navbar';
 import Home from './pages/Home';
 import Property from './pages/Property';
 import Contact from './pages/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import SingleProperty from './components/propertyComponents/singlePropertyPage/SingleProperty';
 import { PropertiesProvider } from './context/PropertyContext';
 import AboutUs from './pages/AboutUs';
