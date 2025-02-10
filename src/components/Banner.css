@@ -1,29 +1,95 @@
 .banner {
-    height: 80vh;
-    margin-top: 4.5em;
+  height: 70vh;
+  width: 100%;
+  font-family: "Poppins", serif;
+  display: flex;
+  justify-content: center;
 }
-
-.main-slide img {
-    height: 76vh !important;
+.banner .banner-component {
+  margin-top: 4.9em;
+  padding: 0 3em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.main-slide .carousel-caption {
+.banner-component .banner-overlay {
+  position: absolute;
+  width: 100%;
+  height: 57vh;
+  top: 0;
+  left: 0;
+  background-color: var(--blue-heading);
+  z-index: 10;
+  opacity: 0.5;
+}
+.banner-component .banner-intro{
     position: absolute;
-    top: 80%;
-    left: 3%;
-    transform: translateY(-50%);
-    text-align: left;
+    z-index: 11;
+    padding: 0 20em;
+    
 }
-
-.main-slide .carousel-caption h3 {
-    font-size: 3rem;
-    font-weight: bold;
+.banner-component .banner-intro h3{
     color: white;
-   padding: 10px;
-   display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1.8px;
+    line-height: 1.4;
+}
+.banner-component .banner-intro .banner-links{
+    border-top: 3px solid #051b3d;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    padding-top: 2em;
+    margin-top: 2em;
+}
+.banner-component .banner-intro .banner-links .links-banner{
+    color: white;
+    text-decoration: none;
+    border: 2px solid #051b3d;
+    background-color: #051b3d;
+    padding: 1em 1.5em;
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    transition: all 0.3s ease
+}
+.banner-component .banner-intro .banner-links .links-banner:hover{
+    border: 2px solid white;
+}
+.banner-component .banner .main-slide {
+  height: 100%;
+  width: 100%;
+}
+.banner-component .main-slide .slide-image {
+  height: 57vh;
+  width: 100%;
+}
+.banner-component .main-slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.banner-component .main-slide .carousel-caption {
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  transform: translateY(-50%);
+  text-align: left;
 }
 
-.banner img {
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
+.banner-component .main-slide .carousel-caption h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  display: inline-block;
+}
+
+.banner-component img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
 }

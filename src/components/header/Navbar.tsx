@@ -17,7 +17,7 @@ export default function Navbar() {
       <ul>
       <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/property">Property</CustomLink>
-        <CustomLink to="/blog">Blog</CustomLink>
+        <CustomLink to="/about-us">About Us</CustomLink>
         <CustomLink to="/contact">Contact</CustomLink>
       </ul>
     </nav>

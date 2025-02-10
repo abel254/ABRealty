@@ -1,62 +1,62 @@
-import React from 'react'
+import React from "react";
 import "./Banner.css";
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from "react-bootstrap/Carousel";
+import { propertiesData } from "../data/propertiesData";
+import { PropertyType } from "../propsType/newProperty.type";
+import { Link } from "react-router-dom";
 
+interface BannerComponentProps {
+  properties?: PropertyType[];
+}
 
-const image1 = "/assets/marinaswimming.png"
-const image2 = "/assets/cityrise.jpeg"
-const image3 = "/assets/mistykitchen.jpg"
-const image4 = "/assets/royalbedroom.jpeg"
-const image5 = "/assets/luckinIvy.jpg"
-
-export const BannerComponent = () => {
+export const BannerComponent = ({
+  properties = propertiesData,
+}: BannerComponentProps) => {
   return (
     <>
-     <section className="banner"> 
-     <Carousel className="main-slide">
-      <Carousel.Item>
-      <img src={image1} alt="" />
-        <Carousel.Caption>
-          <h3>Marina Bay Phase 1</h3>
-          <p>This project exemplifies a commitment to top-tier construction standards.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={image2} alt="" />
-        <Carousel.Caption>
-          <h3>City Rise Residency</h3>
-          <p>This project exemplifies a commitment to top-tier construction standards.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={image3} alt="" />
-        <Carousel.Caption>
-          <h3>Misty Springs</h3>
-          <p>
-          This project exemplifies a commitment to top-tier construction standards.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={image4} alt="" />
-        <Carousel.Caption>
-          <h3>Royal Visita</h3>
-          <p>
-          This project exemplifies a commitment to top-tier construction standards.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={image5} alt="" />
-        <Carousel.Caption>
-          <h3>LuckInn Ivy Residency</h3>
-          <p>
-          This project exemplifies a commitment to top-tier construction standards.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    </section>
+      <section className="banner">
+        <div className="banner-component container">
+          <div className="banner-intro">
+            <h3>
+            Finding Prime Properties In Nairobi Can Be Overwhelming — We Simplify Your Investment Journey.
+            </h3>
+            <div className="banner-links">
+              <Link to={'/property'} className="links-banner">View Listed Properties</Link>
+              <Link to={'/contact'} className="links-banner">Contact Us</Link>
+            </div>
+          </div>
+          <Carousel
+            className="main-slide"
+            indicators={false}
+            interval={5000}
+            pause={false}
+          >
+            {properties.map((property) =>
+              property?.images
+                ? Object.values(property?.images)
+                    .filter(
+                      (image) =>
+                        typeof image === "string" && image.trim() !== ""
+                    )
+                    .map(
+                      (image, index) =>
+                        image && (
+                          <Carousel.Item key={`${property?.id}-${index}`}>
+                            <div className="banner-overlay"></div>
+                            <div className="slide-image">
+                              <img
+                                src={image as string}
+                                alt={property?.title}
+                              />
+                            </div>
+                          </Carousel.Item>
+                        )
+                    )
+                : null
+            )}
+          </Carousel>
+        </div>
+      </section>
     </>
   );
 };

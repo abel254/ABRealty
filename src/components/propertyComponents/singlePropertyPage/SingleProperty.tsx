@@ -134,12 +134,24 @@ export default function SingleProperty() {
                 <p className="back">More Properties</p>
               </Link>
             </div>
-            <h2 className="heading">
-              {propertyPageItems?.title}&nbsp;&nbsp;
-              {propertyPageItems?.bedrooms}&nbsp;&nbsp;
-              {propertyPageItems?.location}&nbsp;&nbsp;&nbsp;&nbsp; KES{" "}
-              {Number(propertyPageItems?.startingPrice).toLocaleString()}
-            </h2>
+            <div className="heading-div">
+              <Row>
+                <Col lg={8}>
+                  <h2 className="heading">
+                    {propertyPageItems?.title}&nbsp;&nbsp;
+                    {propertyPageItems?.bedrooms}&nbsp;&nbsp;
+                    {propertyPageItems?.location}&nbsp;&nbsp;&nbsp;&nbsp;
+                  </h2>
+                </Col>
+                <Col lg={4}>
+                  <h2 className="heading heading-kes">
+                    KES{" "}
+                    {Number(propertyPageItems?.startingPrice).toLocaleString()}
+                  </h2>
+                </Col>
+              </Row>
+            </div>
+
             <Col lg={8} className="main-bar">
               <div className="hero-section">
                 {/* Image Carousel */}
@@ -305,7 +317,10 @@ export default function SingleProperty() {
                     and guidance:
                     <span> Abel Muema</span>{" "}
                     <span>&nbsp;&nbsp; +254 712 313980</span>{" "}
-                    <span className="agent-email"> <Link to={'/'}>abelthereator47@gmail.com</Link></span>
+                    <span className="agent-email">
+                      {" "}
+                      <Link to={"/"}>abelthereator47@gmail.com</Link>
+                    </span>
                   </p>
                 </div>
               </div>

@@ -9,11 +9,9 @@ import AboutUsHome from '../components/AboutUsHome';
 export default function Home() {
   return (
     <>
-        <Container>
             <BannerComponent />
             <NewProperties properties={propertiesData}/>
             <AboutUsHome />
-        </Container>
         </>
   )
 }
