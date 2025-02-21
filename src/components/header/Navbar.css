@@ -1,6 +1,7 @@
 .nav-component {
     background-color: white;
-    border-bottom: .5px solid #888;
+    /* border-bottom: .5px solid #888; */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 0;
     left: 0;
@@ -14,12 +15,12 @@
     align-items: stretch;
     gap: 2rem;
     padding: 1.15rem 1rem;
-    
 }
 
 .site-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .nav ul {
@@ -29,6 +30,7 @@
     display: flex;
     gap: 1rem;
     font-weight: bold;
+    font-size: .85rem;
 }
 
 .nav a {
@@ -41,7 +43,10 @@
     letter-spacing: .1rem;
     text-transform: uppercase;
 }
-
-.nav li.active {
+.nav li:hover{
     color: #ba3610;
+}
+.nav li.active{
+    color: #ba3610;
+    border-bottom: 2px solid #ba3610;
 }

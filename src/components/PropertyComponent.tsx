@@ -50,7 +50,7 @@ export default function PropertyComponent({
                 KES&nbsp;
                 {Number(startingPrice).toLocaleString()}
               </p>
-              <p className="start">&nbsp;Starting Price</p>
+              <p className="start">&nbsp;/as Starting Price</p>
               </div>
               
             </div>
