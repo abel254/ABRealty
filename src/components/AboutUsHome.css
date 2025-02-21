@@ -1,74 +1,79 @@
 .about-us {
-    height: 100vh;
-    margin-top: 1em;
-    padding: 6em 0.5em;
-    font-family: "Poppins", serif;
+  height: 90vh;
+  margin-top: 1em;
+  padding: 6em 0.5em;
+  font-family: "Poppins", serif;
+}
+.about-us .us-component{
+    padding: 0 3em;
 }
 .about-us .about-usrow {
-    height: 100%;
+  height: 100%;
 }
-.about-usrow .about-infobg{
-    background-color: #98cad5;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2em 0px 2em 0px;
+.about-usrow .about-infobg {
+  background-color: #98cad5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2em 0px 2em 0px;
 }
 .about-infobg .about-info {
-    height: 60%;
-    padding: 4em 5em; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  height: 60%;
+  padding: 4em 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-.about-infobg .about-info h4{
-    font-size: 2.3rem;
-    font-weight: bold;
-    text-align: center;
-    word-spacing: 2px;
-    line-height: 1.5;
+.about-infobg .about-info h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  word-spacing: 2px;
+  line-height: 1.5;
 }
 .about-infobg .about-info p {
-    text-align: center;
-    word-spacing: 2.3px;
-    letter-spacing: .8px;
-    line-height: 1.8;
-    margin-top: 1.5em;
+  text-align: center;
+  word-spacing: 2.3px;
+  letter-spacing: 0.8px;
+  font-size: .9rem;
+  line-height: 1.8;
+  margin-top: 1.5em;
 }
-.about-infobg .about-info .link-about{
-    color: green;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid green;
-    transition: all 0.5s ease, transform 0.3s ease;
+.about-infobg .about-info .link-about {
+  color: green;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid green;
+  transition: all 0.5s ease, transform 0.3s ease;
 }
-.about-infobg .about-info .link-about:hover{
-    color: var(--blue-heading);
-    border-color: var(--blue-heading);
-    transform: scale(1.1);
+.about-infobg .about-info .link-about:hover {
+  color: var(--blue-heading);
+  border-color: var(--blue-heading);
+  transform: scale(1.1);
 }
 
 /* Description */
 
 .about-us .info {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    padding: .5em 4em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0.5em 4em;
 }
-.about-us .info .info-components h5{
-    color: #505050;
-    font-size: 1.45rem;
-    font-weight: bold;
-    padding-bottom: 3px;
+.about-us .info .info-components h5 {
+  color: #505050;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 3px;
 }
 .about-us .info .info-components p {
-    word-spacing: 2.3px;
-    letter-spacing: .8px;
-    line-height: 1.8;
-    color: #505050;
+  word-spacing: 2.3px;
+  letter-spacing: 0.8px;
+  font-size: .8rem;
+  line-height: 1.8;
+  color: #505050;
 }

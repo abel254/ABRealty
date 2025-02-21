@@ -1,18 +1,29 @@
 .new-properties {
-    margin-top: 3em;
-    height: 110vh;
-    font-family: "Poppins", serif;
+  margin-top: 3em;
+  height: 110vh;
+  font-family: "Poppins", serif;
+}
+.new-properties .new-component{
+  height: 100%;
+    padding: 0 3em;
 }
 .new-properties h2 {
-    font-size: 1.45rem;
-    color: #505050;
+  font-size: 1.3rem;
+  color: var(--blue-heading);
 }
-.new-properties .row{
-    height: 100vh;
+.new-properties .row-one {
+  height: 97%;
 }
-.new-properties .column{
-    height: 50%;
+.new-properties .row-two{
+  height: 100%;
 }
-.new-properties .first{
-    height: 100%; 
+.new-properties .column-two {
+  height: 97%;
+}
+
+.new-properties .row-two .comp-column{
+  height: 48.6%;
+}
+.new-properties .first {
+  height: 97%;
 }

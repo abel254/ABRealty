@@ -17,13 +17,14 @@ export const BannerComponent = ({
       <section className="banner">
         <div className="banner-component container">
           <div className="banner-intro">
-            <h3>
-            Finding Prime Properties In Nairobi Can Be Overwhelming — We Simplify Your Investment Journey.
-            </h3>
-            <div className="banner-links">
+          <div className="banner-links">
               <Link to={'/property'} className="links-banner">View Listed Properties</Link>
               <Link to={'/contact'} className="links-banner">Contact Us</Link>
             </div>
+            <h3>
+            Finding Prime Properties In Nairobi Can Be Overwhelming — We Simplify Your Investment Journey.
+            </h3>
+           
           </div>
           <Carousel
             className="main-slide"

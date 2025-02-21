@@ -6,65 +6,65 @@
   justify-content: center;
 }
 .banner .banner-component {
-  margin-top: 4.9em;
+  margin-top: 5.2em;
   padding: 0 3em;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .banner-component .banner-overlay {
   position: absolute;
   width: 100%;
-  height: 57vh;
+  height: 61vh;
   top: 0;
   left: 0;
-  background-color: var(--blue-heading);
+  background-color: black;
   z-index: 10;
-  opacity: 0.5;
+  opacity: 0.3;
 }
-.banner-component .banner-intro{
-    position: absolute;
-    z-index: 11;
-    padding: 0 20em;
-    
+.banner-component .banner-intro {
+  position: absolute;
+  z-index: 11;
+  padding: 0 7em;
+  bottom: 5em;
+  left: 0;
 }
-.banner-component .banner-intro h3{
-    color: white;
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 1.8px;
-    line-height: 1.4;
+.banner-component .banner-intro h3 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight:bold;
+  text-align: start;
+  letter-spacing: 1.8px;
+  line-height: 1.4;
+ 
 }
-.banner-component .banner-intro .banner-links{
-    border-top: 3px solid #051b3d;
-    display: flex;
-    justify-content: center;
-    gap: 3em;
-    padding-top: 2em;
-    margin-top: 2em;
+.banner-component .banner-intro .banner-links {
+  display: flex;
+  gap: 2em;
+  padding-top: 2em;
+  margin-top: 2em;
 }
-.banner-component .banner-intro .banner-links .links-banner{
-    color: white;
-    text-decoration: none;
-    border: 2px solid #051b3d;
-    background-color: #051b3d;
-    padding: 1em 1.5em;
-    border-radius: 30px;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    transition: all 0.3s ease
+.banner-component .banner-intro .banner-links .links-banner {
+  color: white;
+  text-decoration: none;
+  border: 2px solid green;
+  background-color: green;
+  padding: .7em 1em;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: .8rem;
+  letter-spacing: 1.2px;
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
 }
-.banner-component .banner-intro .banner-links .links-banner:hover{
-    border: 2px solid white;
+.banner-component .banner-intro .banner-links .links-banner:hover {
+  border: 2px solid white;
 }
 .banner-component .banner .main-slide {
   height: 100%;
   width: 100%;
+ 
 }
 .banner-component .main-slide .slide-image {
-  height: 57vh;
+  height: 61vh;
   width: 100%;
 }
 .banner-component .main-slide img {
