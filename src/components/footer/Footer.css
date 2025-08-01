@@ -11,8 +11,10 @@ footer .footer-components {
     align-items: center;
 }
 footer .footer-components .image{
-    height: 6em;
-    width: 6em;
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 footer .footer-components .image img{
     width: 100%;
@@ -80,3 +82,6 @@ footer .footer-components .image img{
     letter-spacing: .1em;
     word-spacing: .1em;
 }
+
+/* ===================== RESPONSIVENESS ===================== */
+

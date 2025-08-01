@@ -1,6 +1,5 @@
 .nav-component {
     background-color: white;
-    /* border-bottom: .5px solid #888; */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 0;
@@ -9,21 +8,39 @@
     z-index: 99;
     font-family: "Poppins", serif;
 }
-.nav{
+
+/* Navigation container */
+.nav {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     gap: 2rem;
     padding: 1.15rem 1rem;
 }
 
+/* Site Title */
 .site-title {
-    font-size: 1.8rem;
-    font-weight: bold;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.nav ul {
+.site-title .site-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: none;
+    color: var(--blue-heading);
+}
+
+.site-title .site-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Default Navigation */
+.nav-links ul {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -33,6 +50,7 @@
     font-size: .85rem;
 }
 
+/* Links */
 .nav a {
     color: inherit;
     text-decoration: none;
@@ -43,10 +61,116 @@
     letter-spacing: .1rem;
     text-transform: uppercase;
 }
-.nav li:hover{
+
+/* Hover and Active State */
+.nav li:hover {
     color: #ba3610;
 }
-.nav li.active{
+.nav li.active {
     color: #ba3610;
     border-bottom: 2px solid #ba3610;
+}
+
+/* ===================== RESPONSIVENESS ===================== */
+
+/* ✅ Mobile Screens (up to 768px) */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    /* Hide the nav links on small screens */
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Display when menu is toggled */
+    .nav-links.open {
+        display: flex;
+        padding: 1rem 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    /* Mobile Menu Button */
+    .mobile-menu-icon {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #ba3610;
+    }
+}
+
+/* ✅ Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav {
+        padding: 1rem 2rem;
+    }
+
+    .site-title {
+        font-size: 1.6rem;
+    }
+
+    .nav-links ul {
+        gap: 1.5rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+    }
+}
+
+/* ✅ Laptops (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .nav {
+        padding: 1rem 3rem;
+    }
+
+    .site-title {
+        font-size: 1.7rem;
+    }
+
+    .nav-links ul {
+        gap: 2rem;
+    }
+}
+
+/* ✅ Large Screens (1201px and above) */
+@media (min-width: 1201px) {
+    .nav {
+        padding: 1rem 4rem;
+    }
+
+    .nav-links ul {
+        gap: 2.5rem;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+}
+
+/* ✅ Hide the mobile menu button on larger screens */
+@media (min-width: 769px) {
+    .mobile-menu-icon {
+        display: none;
+    }
 }

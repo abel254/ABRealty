@@ -17,7 +17,7 @@ export default function NewProperties({
         <h2 className="text-left mb-4">New Properties</h2>
         <div className="row row-one gx-4 gy-4">
           {/* First large property card occupying 50% of section width */}
-          <div className="first col-lg-6">
+          <div className="first col-lg-6 col-md-12">
             <PropertyComponent
               property={properties[0]}
               isFirst={true}
@@ -29,11 +29,12 @@ export default function NewProperties({
               }}
             />
           </div>
+
           {/* Grid of remaining 4 property cards */}
-          <div className="col-lg-6 column-two">
+          <div className="col-lg-6 col-md-12  col-sm-12 col-12 column-two">
             <div className="row row-two gx-4 gy-4">
               {properties.slice(1, 5).map((property, index) => (
-                <div className="col-lg-6 comp-column" key={index}>
+                <div className="col-lg-6 col-md-6 col-sm-6 col-6 comp-column" key={index}>
                   <PropertyComponent
                     property={property}
                     isFirst={false}

@@ -77,3 +77,59 @@
   line-height: 1.8;
   color: #505050;
 }
+
+/* ===================== RESPONSIVENESS ===================== */
+
+@media (max-width: 1200px){
+  .about-us {
+    padding: 6em 0;
+    margin-bottom: 5.5em;
+  }
+  .about-us .us-component{
+    padding: 0;
+}
+.about-infobg .about-info {
+  padding: 4em 3em;
+}
+.about-us .info{
+  padding: 0.5em 2em;
+}
+}
+
+@media (max-width: 992px){
+
+  .about-us{
+    margin-bottom: 18em;
+  }
+  .about-usrow .about-infobg{
+    justify-content: start;
+  }
+  .about-infobg .about-info{
+    padding: 2.5em 2em;
+    align-items: start;
+  }
+  .about-infobg .about-info p{
+    text-align: start;
+  }
+  .about-infobg .about-info .link-about{
+    font-size: .9rem;
+  }
+  .about-us .info {
+    margin-top: 2em;
+  }
+  .about-us .info .info-components p {
+    font-size: .9rem;
+  }
+}
+@media (max-width: 768px){
+
+  .about-us{
+    margin-bottom: 22em;
+  }
+  .about-infobg .about-info h4{
+    font-size: 1.5rem;
+  }
+  .about-infobg .about-info p {
+    font-size: .8rem;
+  }
+}

@@ -9,7 +9,7 @@ export default function AboutUsHome() {
       <section className="about-us">
         <div className="us-component container">
         <Row className="about-usrow">
-          <Col>
+          <Col lg={6} md={12}>
             <div className="about-infobg">
               <div className="about-info">
                 <h4>We're committed to your ideal property investment.</h4>
